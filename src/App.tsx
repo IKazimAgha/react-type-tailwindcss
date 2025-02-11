@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "../src/pages/home";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-blue-600">
-      Simple React Typescript Tailwind Sample
-    </h1>
+    <>
+      <BrowserRouter>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
