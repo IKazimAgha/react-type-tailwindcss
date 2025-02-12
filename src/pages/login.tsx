@@ -5,6 +5,7 @@ import SalamaSVG from "../icons/salama.svg";
 import { InputBox } from '../components/inputBox';
 import { ButtonIcon } from '../components/buttonIcon';
 import SignInSVG from "../icons/signIn.svg";
+import ThumbSVG from "../icons/thumb.svg";
 
 const Home = () => {
     return(
@@ -32,6 +33,9 @@ const Home = () => {
                 </div>
                 <div>
                     <ButtonIcon title='Sign In' icon={SignInSVG} />
+                </div>
+                <div>
+                    <ButtonIcon title='Sign in with UAE PASS' icon={ThumbSVG} customStyle='bg-white text-mainBlue' />
                 </div>
             </div>
         </div>
