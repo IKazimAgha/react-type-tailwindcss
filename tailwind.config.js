@@ -7,7 +7,10 @@ module.exports = {
       colors: {
         mainYellow: "#FFBA1B",
         mainBlue: "#003B5B"
-      }
+      },
+      fontFamily: {
+        'sf-pro-rounded': ['SF Pro Rounded', 'sans-serif'],
+      },
     },
   },
   plugins: [],
