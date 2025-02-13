@@ -7,8 +7,10 @@ import { ButtonIcon } from '../components/buttonIcon';
 import SignInSVG from "../icons/signIn.svg";
 import ThumbSVG from "../icons/thumb.svg";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 
 const Home = () => {
+    const {t, i18n} = useTranslation();
     const navigate = useNavigate();
 
     const handleEvent = () => {
@@ -34,15 +36,15 @@ const Home = () => {
                 </div>
             </div>
             <div className='text-center m-4'>
-                <h5 className='text-mainBlue font-sf-pro-rounded'>Login with mobile number registered in school</h5>
+                <h5 className='text-mainBlue font-sf-pro-rounded'>{t('welcome')}</h5>
                 <div className='mt-5'>
                     <InputBox />
                 </div>
                 <div>
-                    <ButtonIcon title='Sign In' onClick={() => handleEvent()} icon={SignInSVG} />
+                    <ButtonIcon title={t('signIn')} onClick={() => handleEvent()} icon={SignInSVG} />
                 </div>
                 <div>
-                    <ButtonIcon title='Sign in with UAE PASS' icon={ThumbSVG} customStyle='bg-white text-mainBlue' />
+                    <ButtonIcon title={t('signInUAE')} icon={ThumbSVG} customStyle='bg-white text-mainBlue' />
                 </div>
             </div>
         </div>
