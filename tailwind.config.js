@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       colors: {
         mainYellow: "#FFBA1B",
-        mainBlue: "#003B5B"
+        mainBlue: "#003B5B",
+        secBlue:'#003B5B59'
       },
       fontFamily: {
         'sf-pro-rounded': ['SF Pro Rounded', 'sans-serif'],

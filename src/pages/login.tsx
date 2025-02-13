@@ -6,8 +6,15 @@ import { InputBox } from '../components/inputBox';
 import { ButtonIcon } from '../components/buttonIcon';
 import SignInSVG from "../icons/signIn.svg";
 import ThumbSVG from "../icons/thumb.svg";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleEvent = () => {
+        navigate('/address')
+    }
+
     return(
         <div >
             <div className="pt-20 border-b-2 bg-mainYellow border-b-2 rounded-b-[5rem]">
@@ -32,7 +39,7 @@ const Home = () => {
                     <InputBox />
                 </div>
                 <div>
-                    <ButtonIcon title='Sign In' icon={SignInSVG} />
+                    <ButtonIcon title='Sign In' onClick={() => handleEvent()} icon={SignInSVG} />
                 </div>
                 <div>
                     <ButtonIcon title='Sign in with UAE PASS' icon={ThumbSVG} customStyle='bg-white text-mainBlue' />
