@@ -29,7 +29,7 @@ const Home = () => {
                             <img src={SalamaSVG} />
                         </div>
                         <div className="text-mainBlue text-xl">
-                            <div>Peace of Mind,</div>
+                            <div>Peace of Mind, Place of game</div>
                             <div className="ml-6"> Every Ride!</div>
                         </div>
                     </div>
