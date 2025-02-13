@@ -7,16 +7,9 @@ import { ButtonIcon } from '../components/buttonIcon';
 import SignInSVG from "../icons/signIn.svg";
 import ThumbSVG from "../icons/thumb.svg";
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'
 
 const Home = () => {
-    const {t, i18n} = useTranslation();
     const navigate = useNavigate();
-
-    const handleEvent = () => {
-        navigate('/address')
-    }
-
     return(
         <div >
             <div className="pt-20 border-b-2 bg-mainYellow border-b-2 rounded-b-[5rem]">
@@ -29,22 +22,22 @@ const Home = () => {
                             <img src={SalamaSVG} />
                         </div>
                         <div className="text-mainBlue text-xl">
-                            <div>Peace of Mind, Place of game</div>
+                            <div>Peace of Mind,</div>
                             <div className="ml-6"> Every Ride!</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='text-center m-4'>
-                <h5 className='text-mainBlue font-sf-pro-rounded'>{t('welcome')}</h5>
+                <h5 className='text-mainBlue font-sf-pro-rounded'>{('welcome')}</h5>
                 <div className='mt-5'>
                     <InputBox />
                 </div>
                 <div>
-                    <ButtonIcon title={t('signIn')} onClick={() => handleEvent()} icon={SignInSVG} />
+                    <ButtonIcon title={('signIn')} onPress={() => {}} icon={SignInSVG} />
                 </div>
                 <div>
-                    <ButtonIcon title={t('signInUAE')} icon={ThumbSVG} customStyle='bg-white text-mainBlue' />
+                    <ButtonIcon title='Sign in with UAE PASS' icon={ThumbSVG} customStyle='bg-white text-mainBlue' onPress={() => navigate("/routeStatus")} />
                 </div>
             </div>
         </div>
