@@ -9,6 +9,7 @@ const RouteStatus = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <div className="relative h-screen bg-mainYellow flex flex-col justify-end items-center p-6">
+        <h1>heading</h1>
       <Drawer isDrawerOpen={ isDrawerOpen } onClose={() => setIsDrawerOpen(false)}></Drawer>
       {/* Bottom Custom Widget */}
       <div className="absolute bottom-6 left-4 flex items-center space-x-4 bg-white shadow-lg rounded-full  ">
