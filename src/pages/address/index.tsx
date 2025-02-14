@@ -35,7 +35,7 @@ const Address = () => {
     }
 
     const onClickOpenMenu = () => {
-        // console.log("open menu")
+        console.log("open menu")
     }
 
     return(
