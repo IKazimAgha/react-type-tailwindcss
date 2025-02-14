@@ -9,7 +9,7 @@ interface CustomSelectProps {
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange }) => {
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="sm:max-w-sm sm:mx-auto">
       <div className="relative">
         <select
           id="custom-select"

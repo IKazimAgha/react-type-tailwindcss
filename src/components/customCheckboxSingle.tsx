@@ -8,7 +8,7 @@ interface CustomCheckboxInterface{
 
 const CustomCheckboxSingle: React.FC<CustomCheckboxInterface> = ({title, checked, onClick}) => {
     return(
-        <div className="flex flex-row mt-4 ml-5 justify-start items-center">
+        <div className="flex flex-row mt-4 ml-5 lg:justify-center justify-start items-center">
             <div onClick={onClick} className={`h-5 w-5 flex rounded-full border-2 ${checked ? 'border-mainYellow' : 'border-mainBlue'} justify-center items-center`}>
                 <div className={`h-3 w-3 rounded-full border-2 ${checked ? 'border-mainYellow bg-mainYellow' : 'border-none'}`} />
             </div>
