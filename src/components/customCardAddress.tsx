@@ -3,7 +3,12 @@ import HomeIconSVG from '../icons/homeIconAdd.svg';
 import HorzSelectIcon from "../icons/horzSelectIcon.svg";
 import DummyMapIcon from "../icons/dummyMap.svg";
 
-const CustomCard = () => {
+interface CustomCardInterface{
+    onClickMenu: any;
+    onClickAddress: any;
+}
+
+const CustomCard: React.FC<CustomCardInterface> = ({onClickAddress, onClickMenu}) => {
     return(
         <div className='bg-mainGray border border-5 rounded-3xl border-mainGray w-full h-[15rem] m-5'>
             <div className='flex w-full justify-between px-5 py-2'>
@@ -18,7 +23,7 @@ const CustomCard = () => {
                         21 Al Manashil St, Al Shawamekh, Sector 7...
                     </h5>
                 </div>
-                <div>
+                <div onClick={() => onClickMenu()}>
                     <img src={HorzSelectIcon} />
                 </div>
             </div>
