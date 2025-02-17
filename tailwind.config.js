@@ -21,4 +21,6 @@ module.exports = {
     },
   },
   plugins: [],
+  // Enable RTL support
+  rtl: true,
 }

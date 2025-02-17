@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 // Import translation JSON files
 import enTranslations from "../../locales/en.json";
-import frTranslations from "../../locales/ar.json";
+import arTranslations from "../../locales/ar.json";
 
 // Initialize i18next
 i18n.use(initReactI18next).init({
@@ -11,8 +11,8 @@ i18n.use(initReactI18next).init({
     en: {
       translation: enTranslations,
     },
-    fr: {
-      translation: frTranslations,
+    ar: {
+      translation: arTranslations,
     },
   },
   lng: "en", // Default language
