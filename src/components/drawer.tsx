@@ -133,7 +133,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
           <div className=" pt-6">
             <button
               className="bg-mainYellow text-mainBlue text-[16px] font-medium rounded-full px-5 py-2  text-center inline-flex items-center space-x-2 w-auto"
-              onClick={() => console.log("App is logged out successfully")}
+              onClick={() => console.log("App logged out successfully")}
             >
               <img src={LogoutSVG} className="h-5 w-5" />
               <span className="text-[16px] font-normal text-mainBlue">
