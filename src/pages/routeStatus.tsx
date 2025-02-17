@@ -4,12 +4,17 @@ import Menu from "../icons/menu.svg";
 import Route from "../icons/route.svg";
 import Add from "../icons/add.svg";
 import { Drawer } from "../components/drawer";
+import { useTranslation } from "react-i18next";
+
 
 const RouteStatus = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const { t, i18n } = useTranslation();
   return (
-    <div className="relative h-screen bg-mainYellow flex flex-col justify-end items-center p-6">
+    <div className={i18n.language === "ar" ? "rtl" : "ltr"}>
+    <div className="relative h-screen bg-mainYellow flex flex-col p-6">
       <Drawer isDrawerOpen={ isDrawerOpen } onClose={() => setIsDrawerOpen(false)}></Drawer>
+      <span>Route status screen</span>
       {/* Bottom Custom Widget */}
       <div className="absolute bottom-6 left-4 flex items-center  bg-white shadow-lg rounded-full  ">
         {/* Menu Icon */}
@@ -33,6 +38,7 @@ const RouteStatus = () => {
       <button className="absolute bottom-6 right-4 bg-mainBlue text-white p-5 rounded-full shadow-lg border-4 border-white">
       <img src={Add} />
       </button>
+    </div>
     </div>
   );
 };

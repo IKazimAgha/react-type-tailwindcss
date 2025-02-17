@@ -14,5 +14,15 @@
     "locationNameText": "ها بقاط شلي",
     "updateText": "ها بقاط",
     "addAddressText": "ها بقاط شلي بمنى أن الغايف هي الشل ولس المحوى ويُسخدم فق صاعبات",
-    "deleteAddressText": "ها بقاط شلي أن مرفع  لهذهه الأجرها بقاط شلي"
+    "deleteAddressText": "ها بقاط شلي أن مرفع  لهذهه الأجرها بقاط شلي",
+    "profile":"حساب تعريفي",
+    "guardians":"الأوصياء",
+    "absence":"غياب",
+    "addresses":"العناوين",
+    "settings":"إعدادات",
+    "talkToUs":"تحدث معنا",
+    "callCenters":"مراكز الاتصال",
+    "faq":"التعليمات",
+    "feedback":"تعليق",
+    "logout":"تسجيل الخروج"
 }
