@@ -24,5 +24,8 @@
     "callCenters":"مراكز الاتصال",
     "faq":"التعليمات",
     "feedback":"تعليق",
-    "logout":"تسجيل الخروج"
+    "logout":"تسجيل الخروج",
+    "sicknessText": "المرض",
+    "busSchoolText": "الحافلة والمدرسة",
+    "afternoonText": "بعد الظهر"
 }

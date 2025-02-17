@@ -8,6 +8,7 @@ import '../src/configure/i18n/i18n'
 import AddNewAddress from './pages/address/addNewAddress';
 import RouteStatus from '../src/pages/routeStatus';
 import EditAddress from './pages/address/editAddress';
+import Absence from './pages/absences';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/addAddress' element={<AddNewAddress />} />
           <Route path='/routeStatus' element={<RouteStatus />} />
           <Route path='/editAddress' element={<EditAddress />} />
+          <Route path='/absence' element={<Absence />} />
         </Routes>
       </BrowserRouter>
     </>
