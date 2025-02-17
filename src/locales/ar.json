@@ -27,5 +27,11 @@
     "logout":"تسجيل الخروج",
     "sicknessText": "المرض",
     "busSchoolText": "الحافلة والمدرسة",
-    "afternoonText": "بعد الظهر"
+    "afternoonText": "بعد الظهر",
+    "submitText": "تأكيد",
+    "emergencyText": "حالة طارئة",
+    "personalText": "شخصي",
+    "travellingText": "السفر",
+    "reasonForAbsence": "سبب الغياب",
+    "dueTo": "بسبب"
 }
