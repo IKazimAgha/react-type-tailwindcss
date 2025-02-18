@@ -72,7 +72,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
 
           <div className="flex-1 overflow-y-auto pl-4 pr-4 pt-6 space-y-4">
             {/* Profile  */}
-            <button className="flex items-center  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center  text-gray-700 hover:text-blue-500" onClick={() => navigate('/profile')}>
               <img src={ProfileSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("profile")}
