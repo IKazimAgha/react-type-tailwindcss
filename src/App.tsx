@@ -10,24 +10,34 @@ import RouteStatus from '../src/pages/routeStatus';
 import EditAddress from './pages/address/editAddress';
 import Absence from './pages/absences';
 import AddNewAbsence from './pages/absences/addNewAbsence';
+import { ThemeProvider } from './contextAPI/contextAPI';
 
+export const ConfigRoutes = () => {
+  return(
+    <>
+      <BrowserRouter>
+          {/* <Navbar /> */}
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/address' element={<Address />} />
+            <Route path='/addAddress' element={<AddNewAddress />} />
+            <Route path='/routeStatus' element={<RouteStatus />} />
+            <Route path='/editAddress' element={<EditAddress />} />
+            <Route path='/absence' element={<Absence />} />
+            <Route path='/addAbsence' element={<AddNewAbsence />} />
+          </Routes>
+        </BrowserRouter>
+    </>
+  )
+}
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        {/* <Navbar /> */}
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/address' element={<Address />} />
-          <Route path='/addAddress' element={<AddNewAddress />} />
-          <Route path='/routeStatus' element={<RouteStatus />} />
-          <Route path='/editAddress' element={<EditAddress />} />
-          <Route path='/absence' element={<Absence />} />
-          <Route path='/addAbsence' element={<AddNewAbsence />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <ConfigRoutes />
+      </ThemeProvider>
     </>
   );
 }
