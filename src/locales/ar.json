@@ -22,7 +22,16 @@
     "settings":"الإعدادات",
     "talkToUs":"ملاحظات المستخدم",
     "callCenters":"مراكز الاتصال",
-    "faq":"الاستفسارات الشائعة",
-    "feedback":"قيم التطبيق على المتجر",
-    "logout":"تسجيل خروج"
+    "faq":"التعليمات",
+    "feedback":"تعليق",
+    "logout":"تسجيل الخروج",
+    "sicknessText": "المرض",
+    "busSchoolText": "الحافلة والمدرسة",
+    "afternoonText": "بعد الظهر",
+    "submitText": "تأكيد",
+    "emergencyText": "حالة طارئة",
+    "personalText": "شخصي",
+    "travellingText": "السفر",
+    "reasonForAbsence": "سبب الغياب",
+    "dueTo": "بسبب"
 }

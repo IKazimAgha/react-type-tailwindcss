@@ -24,5 +24,14 @@
     "callCenters":"Call Centers",
     "faq":"FAQ",
     "feedback":"Feedback",
-    "logout":"Logout"
+    "logout":"Logout",
+    "sicknessText": "Sickness",
+    "busSchoolText": "Bus & School",
+    "afternoonText": "Afternoon",
+    "submitText": "Submit",
+    "emergencyText": "Emergency",
+    "personalText": "Personal",
+    "travellingText": "Travelling",
+    "reasonForAbsence": "Reason for Absence",
+    "dueTo": "Due to"
 }

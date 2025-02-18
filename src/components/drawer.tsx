@@ -13,6 +13,7 @@ import FeedbackSVG from "../icons/feedback.svg";
 import LogoutSVG from "../icons/logout.svg";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { useLangugageContext } from "../contextAPI/contextAPI";
 
 interface DrawerProps {
   isDrawerOpen: boolean;
@@ -22,10 +23,12 @@ interface DrawerProps {
 export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const { localeLang, toggleLocaleLang } = useLangugageContext()
 
   const changeLanguage = () => {
     const newLang = i18n.language === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
+    toggleLocaleLang(newLang)
     document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = newLang;
   };
@@ -83,14 +86,14 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
               </span>
             </button>
             {/* Absence */}
-            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500">
+            <button onClick={() => navigate('/absence')} className="flex items-center pt-2  text-gray-700 hover:text-blue-500">
               <img src={AbsenceSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("absence")}
               </span>
             </button>
             {/* Addresses */}
-            <button className="flex items-center pt-2 text-gray-700 hover:text-blue-500">
+            <button onClick={() => navigate('/address')} className="flex items-center pt-2 text-gray-700 hover:text-blue-500">
               <img src={AddressesSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("addresses")}
