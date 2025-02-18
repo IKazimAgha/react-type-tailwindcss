@@ -6,6 +6,7 @@ import CustomCard from "../../components/customCardAddress";
 import ModalMenu from "../../components/modalAddress";
 import DeleteModalAddress from "../../components/deleteModalAddress";
 import { useLangugageContext } from "../../contextAPI/contextAPI";
+import Navbar from "../navBar/navbar";
 
 interface AddressListProps{
     pickUpType: string,
@@ -45,13 +46,14 @@ const Address = () => {
     }
 
     return(
-        <div className={`${localeLang === 'en' ? 'ltr' : 'rtl'}`}>
+        <div className={`${localeLang === 'ar' ? 'rtl' : 'ltr'}`}>
+            <Navbar title={t('Addresses')} onClickArrow={() => navigate('/routeStatus')} />
             {!!addressList && !(addressList.length > 0) && (
                 <div className="h-screen flex items-center justify-center bg-gray-100">
                     <div className="flex items-center mx-[5.5rem] sm:mx-[5.5rem] text-center justify-center h-screen m-0 bg-gray-100">
                         <h2 className="items-center text-mainBlue font-sf-pro-rounded ">{t('addAddressText')}</h2>
                     </div>
-                    <div onClick={() => handleEvent()} className="fixed bottom-0 right-5 text-white bg-opacity-60 p-3 rounded">
+                    <div onClick={() => handleEvent()} className={`fixed bottom-0 ${localeLang === 'ar' ? "left-5" : 'right-5'} text-white bg-opacity-60 p-3 rounded`}>
                         <img src={AddIcon} />
                     </div>
                 </div>
@@ -63,7 +65,7 @@ const Address = () => {
                             <CustomCard onClickAddress={() => {}}  onClickMenu={() => onClickOpenMenu()}/>
                         )
                     }
-                    <div onClick={() => handleEvent()} className="fixed bottom-0 right-5 text-white bg-opacity-60 p-3 rounded">
+                    <div onClick={() => handleEvent()} className={`fixed bottom-0 ${localeLang === 'ar' ? "left-5" : 'right-5'} text-white bg-opacity-60 p-3 rounded`}>
                         <img src={AddIcon} />
                     </div>
                     <ModalMenu title="Modal Tile" isOpen={isModalOpen} onClickDelete={() => onClickOpenMenuDelete()} onClose={() => onClickOpenMenu()} />

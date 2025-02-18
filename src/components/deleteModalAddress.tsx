@@ -33,8 +33,8 @@ const DeleteModalAddress: React.FC<ModalProps> = ({ isOpen, onClose, title, chil
           <h2 className='items-center text-textBlue font-bold font-sf-pro-rounded'>{t('deleteAddressText')}</h2>
         </div>
         <div className='w-full flex justify-between my-10'>
-          <div onClick={() => onClose()} className='w-[11rem] flex justify-center py-2 px-5 border border-1 rounded-full bg-mainYellow text-mainBlue font-sf-pro-rounded'>No</div>
-          <div onClick={() => onClose()} className='w-[11rem] flex justify-center py-2 px-5 border border-1 rounded-full bg-mainGray text-mainBlue font-sf-pro-rounded'>Yes</div>
+          <div onClick={() => onClose()} className='w-[11rem] flex justify-center py-2 px-5 border border-1 rounded-full bg-mainYellow text-mainBlue font-sf-pro-rounded'>{t('no')}</div>
+          <div onClick={() => onClose()} className='w-[11rem] flex justify-center py-2 px-5 border border-1 rounded-full bg-mainGray text-mainBlue font-sf-pro-rounded'>{t('yes')}</div>
         </div>
       </div>
     </div>
