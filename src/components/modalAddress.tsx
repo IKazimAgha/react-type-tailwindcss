@@ -4,6 +4,7 @@ import EditSVG from "../icons/editIcon.svg";
 import DeleteSVG from "../icons/delete.svg";
 import CancelSVG from "../icons/cancelIcon.svg";
 import { useNavigate } from 'react-router-dom';
+import { useLangugageContext } from '../contextAPI/contextAPI';
 
 type ModalProps = {
   isOpen: boolean;
@@ -16,10 +17,12 @@ type ModalProps = {
 const ModalAddress: React.FC<ModalProps> = ({ isOpen, onClose, title, children, onClickDelete }) => {
   const {t} = useTranslation();
   const navigate = useNavigate();
+  const {localeLang, toggleLocaleLang} = useLangugageContext();
+
   if (!isOpen) return null; // Don't render modal if not open
 
   return (
-    <div className="fixed inset-0 flex justify-center items-end sm:items-end lg:items-center z-50">
+    <div className={`fixed inset-0 flex justify-center items-end sm:items-end lg:items-center z-50 ${localeLang === 'en' ? 'ltr' : 'rtl'}`}>
       <div
         className="absolute inset-0 bg-black bg-opacity-40"
         onClick={onClose}
@@ -30,7 +33,7 @@ const ModalAddress: React.FC<ModalProps> = ({ isOpen, onClose, title, children, 
            <div className='w-[3rem] h-[3rem] bg-white flex justify-center items-center rounded-full'>
               <img src={EditSVG} className='w-[1.5rem] h-[1.5rem]' />
            </div>
-           <div className='ml-[1rem] font-normal font-sf-pro-rounded'>
+           <div className={`${localeLang === 'en' ? 'ml-[1rem]' : 'mr-[1rem]'} font-normal font-sf-pro-rounded`}>
                 <h1 className='font-normal text-[1rem] text-mainBlue'>{t('editText')}</h1>
                 <h5 className='font-400 text-[1rem] text-secBlue'>{t('locationText')}</h5>
            </div>
@@ -39,7 +42,7 @@ const ModalAddress: React.FC<ModalProps> = ({ isOpen, onClose, title, children, 
            <div className='w-[3rem] h-[3rem] bg-white flex justify-center items-center rounded-full'>
               <img src={DeleteSVG} className='w-[1.5rem] h-[1.5rem]'  />
            </div>
-           <div className='ml-[1rem] font-normal font-sf-pro-rounded'>
+           <div className={`${localeLang === 'en' ? 'ml-[1rem]' : 'mr-[1rem]'} font-normal font-sf-pro-rounded`}>
                 <h1 className='font-normal text-[1rem] text-mainBlue leading-[18px]'>{t('deleteText')}</h1>
                 <h5 className='font-400 text-[1rem] text-secBlue'>{t('locationText')}</h5>
            </div>

@@ -6,10 +6,12 @@ import CustomCheckboxSingle from "../../components/customCheckboxSingle";
 import { useTranslation } from "react-i18next"
 import CustomSelect from "../../components/customSelect";
 import { useNavigate } from "react-router-dom";
+import { useLangugageContext } from "../../contextAPI/contextAPI";
 
 const AddNewAddress = () => {
     const navigate = useNavigate();
     const {t} = useTranslation();
+    const { localeLang } = useLangugageContext();
     const [primaryAddress, setPrimaryAddress] = useState<boolean>(false)
     const [sameAddress, setSameAddress] = useState<boolean>(false)
     const [options] = useState([
@@ -43,11 +45,13 @@ const AddNewAddress = () => {
                 <div className="my-4 mb-5">
                     <InputBoxTitle title={t('enterLocation')} className="border-1" />
                 </div>
-                <div className="my-4 mb-5">
+                <div className="my-4 mb-5 sm:max-w-sm sm:mx-auto">
+                    <h1 className={`${localeLang === 'en' ? 'ml-2' : 'mr-2'} my-2`}>{t('selectType')}</h1>
                     <CustomSelect options={options} value="" onChange={() => {}} />
                     <CustomCheckboxSingle onClick={handleEventPrimary} title={t('primaryAddress')} checked={primaryAddress} />
                 </div>
-                <div className="my-4 mb-10">
+                <div className="my-4 mb-10 sm:max-w-sm sm:mx-auto">
+                    <h1 className={`${localeLang === 'en' ? 'ml-2' : 'mr-2'} my-2`}>{t('locationType')}</h1>
                     <CustomSelect options={options} value="" onChange={() => {}} />
                     <CustomCheckboxSingle onClick={handleEventSame} title={t('sameAddress')} checked={sameAddress} />
                 </div>

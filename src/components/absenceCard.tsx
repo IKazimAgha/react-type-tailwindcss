@@ -8,6 +8,7 @@ import BusBreakSVG from "../icons/busBreak.svg";
 import SicknessSVG from "../icons/sickness.svg";
 import SunSetSolidSVG from "../icons/sunsetSolid.svg";
 import CalendarSVG from "../icons/calendar.svg";
+import { useLangugageContext } from '../contextAPI/contextAPI';
 
 interface AbsenceCard {
     isAccordianOpen: boolean,
@@ -24,14 +25,14 @@ interface AbsenceCard {
 
 const AbsenceCard: React.FC<AbsenceCard> = ({ isAccordianOpen, setIsAccordian, childName, absenceFrom, absenceIn, absenceReason, absenceWhen, key, isAccordianOpenIndex, setIsAccordianIndex}) => {
     const {t} = useTranslation();
-    console.log("==========> key", key)
+    const { localeLang } = useLangugageContext();
     return(
         <div key={key} className="border my-5 border-2 bg-mainGray w-full lg:w-[40rem] sm:w-[1rem] px-5 py-5 rounded-3xl">
                 <div className="flex justify-between w-full items-center">
                     <div className="w-[5rem]">
                         <img src={Child1SVG} className="w-[3rem] h-[3rem]"/>
                     </div>
-                    <div className="w-[30rem] ml-5">
+                    <div className={`w-[30rem] ${localeLang === 'ar' ? 'mr-5' : 'ml-5'}`}>
                         <div className="flex justify-between h-7">
                             <h1 className="text-base font-sf-pro-rounded">{childName}</h1>
                             <div onClick={() => {
@@ -55,7 +56,7 @@ const AbsenceCard: React.FC<AbsenceCard> = ({ isAccordianOpen, setIsAccordian, c
                     </div>
                 </div>
                 {isAccordianOpen && (isAccordianOpenIndex === key) && (
-                    <div className="flex justify-center flex-col w-full ml-[4rem] lg:ml-[7rem] ">
+                    <div className={`flex justify-center flex-col ${localeLang === 'ar' ? 'mr-[4rem] lg:mr-[7rem]' : 'ml-[4rem] lg:ml-[7rem]'}`}>
                         <div className="flex my-1">
                             <img src={SicknessSVG} className="w-[1.5rem] h-[1.5rem]" />
                             <h1 className="mx-2">{t('sicknessText')}</h1>

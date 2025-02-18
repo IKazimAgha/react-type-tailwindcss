@@ -33,5 +33,13 @@
     "personalText": "Personal",
     "travellingText": "Travelling",
     "reasonForAbsence": "Reason for Absence",
-    "dueTo": "Due to"
+    "dueTo": "Due to",
+    "yes": "Yes",
+    "no": "No",
+    "fromText": "From",
+    "inTheText": "In The",
+    "whenText": "When",
+    "Addresses": "Addresses",
+    "Absences": "Absences",
+    "Select": "Select"
 }

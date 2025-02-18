@@ -19,7 +19,7 @@ interface ThemeProviderProps {
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const savedLocalLang = localStorage.getItem("themeLanguage") as LocalLang || "en";
   const [localeLang, setLocalLang] = useState<LocalLang>(savedLocalLang)
-
+  console.log("themeProvider", savedLocalLang)
   // Function to toggle theme
 
   const toggleLocaleLang = (_t: string) => {

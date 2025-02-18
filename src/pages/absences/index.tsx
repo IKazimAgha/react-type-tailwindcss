@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import AddIcon from "../../icons/addNewIcon.svg"
 import { useNavigate } from "react-router-dom";
 import AbsenceCard from "../../components/absenceCard";
+import Navbar from "../navBar/navbar";
 
 interface AbsenceListProps {
     id: number,
@@ -58,31 +59,38 @@ const Absence = () => {
         addAbsenceList();
     }, [])
 
+    const handleSelectedRow = (_t: any) => {
+        console.log('handleSelectedRow', _t)
+    }
+
     return (
-        <div className="m-5 flex flex-col lg:flex-row sm:flex-col lg:justify-between">
-            {
-                absenceList && absenceList.length > 0 &&
-                absenceList.map((item: AbsenceListProps, index: number) => {
-                    return(
-                        <AbsenceCard
-                            key={item.id}
-                            isAccordianOpenIndex={isAccordianOpenIndex}
-                            childName={item.childName}
-                            absenceWhen={item.absenceWhen}
-                            absenceFrom={item.absenceFrom}
-                            absenceIn={item.absenceIn}
-                            absenceReason={item.absenceReason}
-                            isAccordianOpen={isAccordianOpen}
-                            setIsAccordian={setIsAccordianOpen}
-                            setIsAccordianIndex={setIsAccordianIndex}
-                        />
-                    )
-                })
-            }
-            <div onClick={() => handleEvent()} className="fixed bottom-0 right-5 text-white bg-opacity-60 p-3 rounded">
-                <img src={AddIcon} />
+        <>
+            <Navbar title={t('Absences')} onClickArrow={() => navigate('/routeStatus')} />
+            <div className="m-5 flex flex-col lg:flex-row sm:flex-col lg:justify-between">
+                {
+                    absenceList && absenceList.length > 0 &&
+                    absenceList.map((item: AbsenceListProps, index: number) => {
+                        return(
+                            <AbsenceCard
+                                key={item.id}
+                                isAccordianOpenIndex={isAccordianOpenIndex}
+                                childName={item.childName}
+                                absenceWhen={item.absenceWhen}
+                                absenceFrom={item.absenceFrom}
+                                absenceIn={item.absenceIn}
+                                absenceReason={item.absenceReason}
+                                isAccordianOpen={isAccordianOpen}
+                                setIsAccordian={setIsAccordianOpen}
+                                setIsAccordianIndex={handleSelectedRow}
+                            />
+                        )
+                    })
+                }
+                <div onClick={() => handleEvent()} className="fixed bottom-0 right-5 text-white bg-opacity-60 p-3 rounded">
+                    <img src={AddIcon} />
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

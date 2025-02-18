@@ -11,9 +11,11 @@ import EditAddress from './pages/address/editAddress';
 import UserProfile from './pages/address/profile';
 import Absence from './pages/absences';
 import AddNewAbsence from './pages/absences/addNewAbsence';
-import { ThemeProvider } from './contextAPI/contextAPI';
+import { ThemeProvider, useLangugageContext } from './contextAPI/contextAPI';
 
 export const ConfigRoutes = () => {
+  const { localeLang } = useLangugageContext();
+  console.log("checking locale language", localeLang)
   return(
     <>
       <BrowserRouter>

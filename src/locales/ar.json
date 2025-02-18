@@ -33,5 +33,13 @@
     "personalText": "شخصي",
     "travellingText": "السفر",
     "reasonForAbsence": "سبب الغياب",
-    "dueTo": "بسبب"
+    "dueTo": "بسبب",
+    "yes": "ها بقاط",
+    "no": "ها بق",
+    "fromText": "من",
+    "inTheText": "في",
+    "whenText": "بتاريخ",
+    "Addresses": "ها بقاط شلي",
+    "Absences": "ها بقاط شلي أن",
+    "Select": "اختر"
 }
