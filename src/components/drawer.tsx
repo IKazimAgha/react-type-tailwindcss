@@ -12,6 +12,7 @@ import FAQ from "../icons/faq.svg";
 import FeedbackSVG from "../icons/feedback.svg";
 import LogoutSVG from "../icons/logout.svg";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 interface DrawerProps {
   isDrawerOpen: boolean;
@@ -20,6 +21,7 @@ interface DrawerProps {
 
 export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const changeLanguage = () => {
     const newLang = i18n.language === "en" ? "ar" : "en";
@@ -67,7 +69,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
 
           <div className="flex-1 overflow-y-auto pl-4 pr-4 pt-6 space-y-4">
             {/* Profile  */}
-            <button className="flex items-center  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center  text-gray-700 hover:text-blue-500" onClick={() => navigate('/profile')}>
               <img src={ProfileSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("profile")}
