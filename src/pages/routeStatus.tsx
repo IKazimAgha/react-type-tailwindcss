@@ -5,6 +5,7 @@ import Route from "../icons/route.svg";
 import Add from "../icons/add.svg";
 import { Drawer } from "../components/drawer";
 import { useTranslation } from "react-i18next";
+import HomeScreen from "./homeScreens";
 
 const RouteStatus = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -14,7 +15,7 @@ const RouteStatus = () => {
     <div className={i18n.language === "ar" ? "rtl" : "ltr"}>
       <div className="relative h-screen bg-mainYellow flex flex-col p-6">
         <Drawer isDrawerOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
-        <span>Route status screen</span>
+        <HomeScreen />
 
         {/* Bottom Custom Widget Container */}
         <div className="absolute bottom-0 left-0 w-full flex items-center px-5 pb-6">
