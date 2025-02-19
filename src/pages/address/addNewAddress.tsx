@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import CustomSelect from "../../components/customSelect";
 import { useNavigate } from "react-router-dom";
 import { useLangugageContext } from "../../contextAPI/contextAPI";
+import GoogleMapComponent from "../../components/mapsContainer";
 
 const AddNewAddress = () => {
     const navigate = useNavigate();
@@ -40,6 +41,7 @@ const AddNewAddress = () => {
         <div>
             <div className="w-full lg:h-screen sm:h-64 bg-mainBlue">
                 <img src={MapSvg} className="w-full lg:h-[40rem] sm:h-80 object-cover" />
+                {/* <GoogleMapComponent /> */}
             </div>
             <div className="bg-gray-100 fixed mt-10 inset-x-0 bottom-[0rem] w-full height:auto py-5 pb-10 border-t-2xl lg:rounded-t-[3rem] sm:rounded-t-[36px] px-5">
                 <div className="my-4 mb-5">
