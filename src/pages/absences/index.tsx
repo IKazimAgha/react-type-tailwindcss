@@ -61,6 +61,7 @@ const Absence = () => {
 
     const handleSelectedRow = (_t: any) => {
         console.log('handleSelectedRow', _t)
+        setIsAccordianIndex(_t)
     }
 
     return (
@@ -72,7 +73,7 @@ const Absence = () => {
                     absenceList.map((item: AbsenceListProps, index: number) => {
                         return(
                             <AbsenceCard
-                                key={item.id}
+                                id={item.id}
                                 isAccordianOpenIndex={isAccordianOpenIndex}
                                 childName={item.childName}
                                 absenceWhen={item.absenceWhen}
