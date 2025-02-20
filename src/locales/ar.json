@@ -41,5 +41,11 @@
     "whenText": "بتاريخ",
     "Addresses": "ها بقاط شلي",
     "Absences": "ها بقاط شلي أن",
-    "Select": "اختر"
+    "Select": "اختر",
+    "firstName":"الاسم الاول",
+    "lastName":"اسم العائلة",
+    "email":"البريد الإلكتروني",
+    "home":"الصفحة الرئيسية",
+    "mobile":"الجوال",
+    "nationality":"الجنسية"
 }

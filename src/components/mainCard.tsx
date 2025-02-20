@@ -7,3 +7,4 @@ const MainCard = (childern: any) => {
         </div>
     )
 }
+export default MainCard;
