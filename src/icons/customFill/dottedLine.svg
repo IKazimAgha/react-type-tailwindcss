@@ -1,0 +1,19 @@
+<svg
+  width="247"
+  height="4"
+  viewBox="0 0 247 4"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+<line
+    opacity="0.3"
+    x1="2"
+    y1="2"
+    x2="245"
+    y2="2"
+    stroke="white"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-dasharray="0.1 12"
+  />
+</svg>
