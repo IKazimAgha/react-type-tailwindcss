@@ -41,5 +41,11 @@
     "whenText": "When",
     "Addresses": "Addresses",
     "Absences": "Absences",
-    "Select": "Select"
+    "Select": "Select",
+    "firstName":"First Name",
+    "lastName":"Last Name",
+    "email":"Email",
+    "home":"Home",
+    "mobile":"Mobile",
+    "nationality":"Nationality"
 }

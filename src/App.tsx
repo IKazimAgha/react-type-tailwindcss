@@ -8,10 +8,10 @@ import '../src/configure/i18n/i18n'
 import AddNewAddress from './pages/address/addNewAddress';
 import RouteStatus from '../src/pages/routeStatus';
 import EditAddress from './pages/address/editAddress';
-import UserProfile from './pages/address/profile';
 import Absence from './pages/absences';
 import AddNewAbsence from './pages/absences/addNewAbsence';
 import { ThemeProvider, useLangugageContext } from './contextAPI/contextAPI';
+import UserProfile from './pages/profile';
 
 export const ConfigRoutes = () => {
   const { localeLang } = useLangugageContext();
@@ -29,6 +29,7 @@ export const ConfigRoutes = () => {
             <Route path='/editAddress' element={<EditAddress />} />
             <Route path='/absence' element={<Absence />} />
             <Route path='/addAbsence' element={<AddNewAbsence />} />
+            <Route path='/profile' element={<UserProfile />} />
           </Routes>
         </BrowserRouter>
     </>
