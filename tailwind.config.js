@@ -17,7 +17,9 @@ module.exports = {
         mainGray2 : '#F8F8F8',
         mainBlueTint2: '#B2C4CE',
         grayDark: '#92CDED',
-        maineBlueTintBorder: '#E5EBEF'
+        maineBlueTintBorder: '#E5EBEF',
+        green: '#10E1A5',
+        red: '#F57070'
       },
       fontFamily: {
         'sf-pro-rounded': ['SF Pro Rounded', 'sans-serif'],
