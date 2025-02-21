@@ -8,6 +8,7 @@ import HomeFillGreen from "../icons/customFill/homeFillGreen.svg";
 import HomeFillRed from "../icons/customFill/homeFillRed.svg";
 import HomeFill from "../icons/customFill/homeFill.svg";
 import DottedLine from "../icons/customFill/dottedLine.svg";
+import GoogleMapComponent from "./mapsContainer";
 
 const RouteCards = () => {
     return(
@@ -15,7 +16,7 @@ const RouteCards = () => {
             <div className="flex flex-col border-0 border-mainBlue rounded-[48px] bg-mainBlue">
                 <div className="border-b-[4px] rounded-b-[48px] border-b-mainYellow z-10">
                     <div className="h-[7rem] w-full rounded-3xl">
-                        <img src={MapSvg} className="h-[7rem] w-full object-cover rounded-t-[48px]" />
+                        <GoogleMapComponent />
                     </div>
                     <div className="flex flex-col mx-[2rem]">
                         <p className="my-2 mt-5 flex justify-end text-bold font-sf-pro-round text-mainYellow leading-[22px] text-[14px]">Australian School of Abu Dhabi</p>
