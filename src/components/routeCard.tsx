@@ -8,7 +8,7 @@ import HomeFillGreen from "../icons/customFill/homeFillGreen.svg";
 import HomeFillRed from "../icons/customFill/homeFillRed.svg";
 import HomeFill from "../icons/customFill/homeFill.svg";
 import DottedLine from "../icons/customFill/dottedLine.svg";
-import GoogleMapComponent from "./mapsContainer";
+import GoogleMapComponent from './maps/mapsContainer';
 
 const RouteCards = () => {
     return(

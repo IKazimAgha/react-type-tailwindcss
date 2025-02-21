@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import CustomSelect from "../../components/customSelect";
 import { useNavigate } from "react-router-dom";
 import { useLangugageContext } from "../../contextAPI/contextAPI";
-import GoogleMapComponent from "../../components/mapsContainer";
+// import GoogleMapComponent from "../../components/mapsContainer";
 
 const AddNewAddress = () => {
     const navigate = useNavigate();

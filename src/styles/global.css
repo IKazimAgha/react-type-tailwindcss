@@ -1,0 +1,18 @@
+/* src/styles/global.css */
+
+/* Regular weight font */
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/public/fonts/SF-Pro-Rounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Bold weight font */
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/public/fonts/SF-Pro-Rounded-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
