@@ -272,7 +272,7 @@ const GoogleMapComponent: React.FC = () => {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey=''>
+    <LoadScript googleMapsApiKey="">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
@@ -291,9 +291,16 @@ const GoogleMapComponent: React.FC = () => {
       >
         <Marker
           position={homeLocation}
+          icon={{
+            url: MarkerYellow, // Use an orange marker
+            scaledSize: new window.google.maps.Size(20,20)
+          }}
         />
         <Marker
           position={schoolLocation}
+          icon={{
+            url: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png", // Use an orange marker
+          }}
         />
 
         {/* Polyline between home and school */}
