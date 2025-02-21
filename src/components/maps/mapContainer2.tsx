@@ -272,35 +272,28 @@ const GoogleMapComponent: React.FC = () => {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey="">
+    <LoadScript googleMapsApiKey=''>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
         zoom={15}
         onLoad={onLoad}
-        options={{
-          styles: darkModeStyle,
-          mapTypeControl: false,
-          scaleControl: false,
-          rotateControl: false,
-          fullscreenControl: false,
-          streetViewControl: false,
-          disableDefaultUI: true,
-          gestureHandling: 'none'
-        }}
+        // options={{
+        //   styles: darkModeStyle,
+        //   mapTypeControl: false,
+        //   scaleControl: false,
+        //   rotateControl: false,
+        //   fullscreenControl: false,
+        //   streetViewControl: false,
+        //   disableDefaultUI: true,
+        //   gestureHandling: 'none'
+        // }}
       >
         <Marker
           position={homeLocation}
-          icon={{
-            url: MarkerYellow, // Use an orange marker
-            scaledSize: new window.google.maps.Size(20,20)
-          }}
         />
         <Marker
           position={schoolLocation}
-          icon={{
-            url: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png", // Use an orange marker
-          }}
         />
 
         {/* Polyline between home and school */}
