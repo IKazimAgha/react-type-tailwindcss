@@ -24,6 +24,13 @@ module.exports = {
       fontFamily: {
         'sf-pro-rounded': ['SF Pro Rounded', 'sans-serif'],
       },
+      letterSpacing: {
+        '2p': '2%', // Custom letter-spacing value
+      },
+      lineHeight: {
+        '22': '22px', // Custom line height
+        '18': '18px'
+      },
     },
   },
   plugins: [],

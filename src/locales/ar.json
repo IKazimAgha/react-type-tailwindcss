@@ -47,5 +47,9 @@
     "email":"البريد الإلكتروني",
     "home":"الصفحة الرئيسية",
     "mobile":"الجوال",
-    "nationality":"الجنسية"
+    "nationality":"الجنسية",
+    "boardedBus": "صعد الحافلة",
+    "notBoarded": "لم يصعد الحافلة",
+    "arrivedHome": "وصل إلى المنزل",
+    "australianSchool": "المدرسة الأسترالية في أبوظبي"
 }

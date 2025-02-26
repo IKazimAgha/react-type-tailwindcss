@@ -47,5 +47,9 @@
     "email":"Email",
     "home":"Home",
     "mobile":"Mobile",
-    "nationality":"Nationality"
+    "nationality":"Nationality",
+    "boardedBus": "Boarded the bus",
+    "notBoarded": "Hasn't boarded",
+    "arrivedHome": "Arrived at home",
+    "australianSchool": "Australian School of Abu Dhabi"
 }
