@@ -10,7 +10,7 @@ import HomeFill from "../icons/customFill/homeFill.svg";
 import DottedLine from "../icons/customFill/dottedLine.svg";
 import GoogleMapComponent from './maps/mapsContainer';
 import { useTranslation } from "react-i18next";
-
+import { useNavigate } from "react-router-dom";
 interface RouteCards {
 
 }
@@ -26,6 +26,7 @@ interface RouteCardLists {
 
 const RouteCards = () => {
 
+    const navigate = useNavigate();
     const {t, i18n} = useTranslation();
     const [routeCardsList, setRouteCardsList] = useState<RouteCardLists[]>([
         {
@@ -100,7 +101,10 @@ const RouteCards = () => {
     const handleRouteCardDisplay = (item: RouteCardLists, index: number) => {
         if(index === 0){
             return (
-                <div onClick={() => handleSelectedView(item)} className="flex flex-col border-0 border-mainBlue rounded-[48px] bg-mainBlue">
+                <div onClick={() => {
+                    navigate('/routeDetails')
+                    handleSelectedView(item)
+                }} className="flex flex-col border-0 border-mainBlue rounded-[48px] bg-mainBlue">
                     <div className="border-b-[4px] rounded-b-[48px] border-b-mainYellow z-10">
                         <div className="h-[7rem] w-full rounded-3xl">
                             {/* <GoogleMapComponent /> */}

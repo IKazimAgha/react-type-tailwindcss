@@ -19,17 +19,23 @@ module.exports = {
         grayDark: '#92CDED',
         maineBlueTintBorder: '#E5EBEF',
         green: '#10E1A5',
-        red: '#F57070'
+        red: '#F57070',
+        mainBlueMid: '#A8D7F1',
+        mainBlueNormal:'#BEE1F4',
+        mainBlueThin: '#D3EBF8',
+        mainYellowTint: '#FFF8E8'
       },
       fontFamily: {
         'sf-pro-rounded': ['SF Pro Rounded', 'sans-serif'],
       },
       letterSpacing: {
         '2p': '2%', // Custom letter-spacing value
+        '0.8p': '0.8%'
       },
       lineHeight: {
         '22': '22px', // Custom line height
-        '18': '18px'
+        '18': '18px',
+        '24': '24px'
       },
     },
   },
