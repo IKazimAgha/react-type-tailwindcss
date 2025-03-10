@@ -14,6 +14,7 @@
     "locationNameText": "Location Name",
     "updateText": "Update",
     "addAddressText": "There are no addresses added yet. To add one, click Plus (+)",
+    "addGuardianText":"There are no guardians signed yet. To add one, click Plus (+)",
     "deleteAddressText": "Are you sure you want to delete this address?",
     "profile":"Profile",
     "guardians":"Guardians",
@@ -51,5 +52,11 @@
     "boardedBus": "Boarded the bus",
     "notBoarded": "Hasn't boarded",
     "arrivedHome": "Arrived at home",
-    "australianSchool": "Australian School of Abu Dhabi"
+    "australianSchool": "Australian School of Abu Dhabi",
+    "newGuardian":"New Guardian",
+    "relation":"Relation",
+    "middleName":"Middle Name",
+    "phoneNumber":"Phone Number",
+    "save":"Save"
+
 }

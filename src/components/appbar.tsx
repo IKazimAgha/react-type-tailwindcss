@@ -10,6 +10,7 @@ interface AppBarProps {
   title: string;
   subtitle?: string;
   trailingIcon?: React.ReactNode;
+  customBackIcon?:React.ReactNode;
   onBack?: () => void;
   bgColor?: string;
   isProfile?: boolean;
@@ -19,6 +20,7 @@ const AppBar: React.FC<AppBarProps> = ({
   title,
   subtitle,
   trailingIcon,
+  customBackIcon,
   onBack,
   bgColor = "bg-mainYellow",
   isProfile = false,
@@ -29,20 +31,22 @@ const AppBar: React.FC<AppBarProps> = ({
     <div className={`flex items-center justify-between ${bgColor} px-4 py-3`}>
       {/* Back Button */}
       <button
-        onClick={onBack || (() => navigate(-1))}
+        onClick={customBackIcon?()=>{}:onBack || (() => navigate(-1))}
         className="pt-6 rounded-full transition"
       >
-        {isProfile ? (
-          i18n.language === "ar" ? (
-            <img src={ProfileBackArSVG} />
+        {
+          customBackIcon? customBackIcon:isProfile ? (
+            i18n.language === "ar" ? (
+              <img src={ProfileBackArSVG} />
+            ) : (
+              <img src={ProfileBackAEnSVG} />
+            )
+          ) : i18n.language === "ar" ? (
+            <img src={BackArSVG} />
           ) : (
-            <img src={ProfileBackAEnSVG} />
+            <img src={BackSVG} />
           )
-        ) : i18n.language === "ar" ? (
-          <img src={BackArSVG} />
-        ) : (
-          <img src={BackSVG} />
-        )}
+        }
       </button>
 
       {/* Title & Subtitle */}

@@ -79,7 +79,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
               </span>
             </button>
             {/* Guardian */}
-            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500" onClick={() => navigate('/guardians')}>
               <img src={GuardiansSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("guardians")}
