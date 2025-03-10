@@ -13,6 +13,8 @@ import AddNewAbsence from './pages/absences/addNewAbsence';
 import { ThemeProvider, useLangugageContext } from './contextAPI/contextAPI';
 import UserProfile from './pages/profile';
 import NotificationScreen from './pages/notification';
+import GuardiansList from './pages/guardians/guardiansList';
+import AddGuardian from './pages/guardians/addGuardian';
 
 export const ConfigRoutes = () => {
   const { localeLang } = useLangugageContext();
@@ -32,6 +34,8 @@ export const ConfigRoutes = () => {
             <Route path='/notifications' element={<NotificationScreen />} />
             <Route path='/addAbsence' element={<AddNewAbsence />} />
             <Route path='/profile' element={<UserProfile />} />
+            <Route path='/guardians' element={<GuardiansList />} />
+            <Route path='/addGuardian' element={<AddGuardian />} />
           </Routes>
         </BrowserRouter>
     </>
