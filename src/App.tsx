@@ -15,6 +15,8 @@ import UserProfile from './pages/profile';
 import NotificationScreen from './pages/notification';
 import GuardiansList from './pages/guardians/guardiansList';
 import AddGuardian from './pages/guardians/addGuardian';
+import Settings from './pages/settings';
+import FAQ from './pages/faq';
 
 export const ConfigRoutes = () => {
   const { localeLang } = useLangugageContext();
@@ -36,6 +38,8 @@ export const ConfigRoutes = () => {
             <Route path='/profile' element={<UserProfile />} />
             <Route path='/guardians' element={<GuardiansList />} />
             <Route path='/addGuardian' element={<AddGuardian />} />
+            <Route path='/settings' element={<Settings />} />
+            <Route path='/faq' element={<FAQ />} />
           </Routes>
         </BrowserRouter>
     </>

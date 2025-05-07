@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chart } from 'react-google-charts';
+// import { Chart } from 'react-google-charts';
 
 const MonthlyPieChart = () => {
   // Data for the pie chart with equal values for each month
@@ -35,13 +35,13 @@ const MonthlyPieChart = () => {
 
   return (
     <div>
-      <Chart
+      {/* <Chart
         chartType="PieChart"
         data={data}
         options={options}
         width="100%"
         height="400px"
-      />
+      /> */}
     </div>
   );
 };
