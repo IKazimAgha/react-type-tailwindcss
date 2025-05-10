@@ -1,5 +1,3 @@
-import React from 'react';
-import { Button } from '../components/button';
 import KidSVG from "../icons/kid.svg"
 import SalamaSVG from "../icons/salama.svg";
 import { InputBox } from '../components/inputBox';
@@ -10,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-    const {t} = useTranslation()
+    const {t} = useTranslation();
     const navigate = useNavigate();
     return(
         <div className=''>

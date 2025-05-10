@@ -14,6 +14,7 @@
     "locationNameText": "ها بقاط شلي",
     "updateText": "ها بقاط",
     "addAddressText": "ها بقاط شلي بمنى أن الغايف هي الشل ولس المحوى ويُسخدم فق صاعبات",
+    "addGuardianText":"ها بقاط شلي بمنى أن الغايف هي الشل ولس المحوى ويُسخدم فق",
     "deleteAddressText": "ها بقاط شلي أن مرفع  لهذهه الأجرها بقاط شلي",
     "profile":"الملف الشخصي",
     "guardians":"مقدمي الرعاية للأبناء",
@@ -51,5 +52,10 @@
     "boardedBus": "صعد الحافلة",
     "notBoarded": "لم يصعد الحافلة",
     "arrivedHome": "وصل إلى المنزل",
-    "australianSchool": "المدرسة الأسترالية في أبوظبي"
+    "australianSchool": "المدرسة الأسترالية في أبوظبي",
+    "newGuardian":"المحوى ويُسخدم",
+    "relation":"علاقة",
+     "middleName":"الاسم الأوسط",
+     "phoneNumber":"رقم التليفون",
+     "save":"يحفظ"
 }

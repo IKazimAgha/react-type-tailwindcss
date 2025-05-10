@@ -58,7 +58,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
           >
             <ProfileAvatar
               src={
-                "https://s3-alpha-sig.figma.com/img/44e1/0dbd/f47f8b2405057fd92348a0f698c5fee3?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BJfAZbCUKhadnLuyuvPTw5R6-djDPOCCzJVhLvm~inhKB~UXpFVaew10I10chHdwj-MMEakq398yc5DNUoev9QXHcnBGJTrY76s9ZA~LZrOC5jxBLDglpUCZIbfpNc-o~Uy6U8jCYtax26LUtHzp64VtsFLE1ydlBiSPoU6YhAXTRFHaBl0za~TRfbx4FD4tbP1WSAAYHR2csS2Qd6Ie-km68fkZ~89OTgE25ZHvlBqOfE12l7POdV8p8Qp9d0El3kcqtO152AcJzy-JBLEDbbctnU1X3o0gnnCmefwmhhM9A-sr6OY3cB6R~3MdPVst5DIaqWOROcp6tnROdaCFBQ__"
+                "https://s3-alpha-sig.figma.com/img/44e1/0dbd/f47f8b2405057fd92348a0f698c5fee3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Z4zm23U25gRmPjbkwobRGs6ntnyJpQI0AkZhHWRkS2xTvIidDNkzNzP4su6cpxBD2bO2eD75Qlhr6m03bAkBVBciLXlELPI7cuFoTmNkLdz44dcC8HzVf9Gi1mxESvDR4kZAa0Wx9B915af1gV3yQ98j2VliWmsqYn~-2HGPF5X4CSwdDAu7YGKrQcuNRXm5diq8ZbomfxovZrB9f~ViHHbOvNoZQ1DM7eHlecm6hM1HrR3LpP21pJ2KuGLlcXFMSjqGIDMyHrkVlWRYoJJyYa2FfXmwUvdvaqvLvrtZChB9QJ29bhv8mXz-NYWCarXn~nu1XdqoF-AJNzmanUrqow__"
               }
               size={80}
             ></ProfileAvatar>
@@ -79,7 +79,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
               </span>
             </button>
             {/* Guardian */}
-            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500" onClick={() => navigate('/guardians')}>
               <img src={GuardiansSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("guardians")}
@@ -100,7 +100,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
               </span>
             </button>
             {/* Settings */}
-            <button className="flex items-center  pt-2  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center  pt-2  text-gray-700 hover:text-blue-500" onClick={() => navigate('/settings')}>
               <img src={SettingsSVG} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("settings")}
@@ -131,7 +131,7 @@ export const Drawer: React.FC<DrawerProps> = ({ isDrawerOpen, onClose }) => {
               </span>
             </button>
             {/* FAQ */}
-            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500">
+            <button className="flex items-center pt-2  text-gray-700 hover:text-blue-500" onClick={() => navigate('/faq')}>
               <img src={FAQ} />
               <span className="text-[18px] font-normal text-mainBlue pl-6 pr-6">
                 {t("faq")}
